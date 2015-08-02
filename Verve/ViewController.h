@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView1;
+@property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView2;
 
 @end
 

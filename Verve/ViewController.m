@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    //for image 1
+    
+    self.ProfileImageView1.layer.cornerRadius = self.ProfileImageView1.frame.size.width/2;
+    self.ProfileImageView1.layer.borderWidth = 3.8f;
+    self.ProfileImageView1.layer.borderColor = [UIColor blackColor].CGColor;
+    self.ProfileImageView1.clipsToBounds = YES;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

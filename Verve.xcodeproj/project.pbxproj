@@ -14,6 +14,8 @@
 		1B7AF3CB1B6E5F9700C46A9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */; };
 		1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3CC1B6E5F9700C46A9B /* LaunchScreen.xib */; };
 		1B7AF3DA1B6E5F9700C46A9B /* VerveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3D91B6E5F9700C46A9B /* VerveTests.m */; };
+		1B7AF3E81B6E847800C46A9B /* IMG_2064.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3E71B6E847800C46A9B /* IMG_2064.PNG */; };
+		1B7AF3EA1B6E90E400C46A9B /* HoustonSkyline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3E91B6E90E400C46A9B /* HoustonSkyline.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		1B7AF3D31B6E5F9700C46A9B /* VerveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7AF3D81B6E5F9700C46A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7AF3D91B6E5F9700C46A9B /* VerveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerveTests.m; sourceTree = "<group>"; };
+		1B7AF3E71B6E847800C46A9B /* IMG_2064.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_2064.PNG; path = ../../../Documents/Photos/IMG_2064.PNG; sourceTree = "<group>"; };
+		1B7AF3E91B6E90E400C46A9B /* HoustonSkyline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = HoustonSkyline.jpg; path = ../../../Documents/Photos/HoustonSkyline.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		1B7AF3B11B6E5F9700C46A9B = {
 			isa = PBXGroup;
 			children = (
+				1B7AF3E41B6E63DE00C46A9B /* Prototype */,
 				1B7AF3BC1B6E5F9700C46A9B /* Verve */,
 				1B7AF3D61B6E5F9700C46A9B /* VerveTests */,
 				1B7AF3BB1B6E5F9700C46A9B /* Products */,
@@ -81,10 +86,13 @@
 		1B7AF3BC1B6E5F9700C46A9B /* Verve */ = {
 			isa = PBXGroup;
 			children = (
+				1B7AF3E91B6E90E400C46A9B /* HoustonSkyline.jpg */,
+				1B7AF3E31B6E62B400C46A9B /* Prototype */,
 				1B7AF3C11B6E5F9700C46A9B /* AppDelegate.h */,
 				1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */,
 				1B7AF3C41B6E5F9700C46A9B /* ViewController.h */,
 				1B7AF3C51B6E5F9700C46A9B /* ViewController.m */,
+				1B7AF3E71B6E847800C46A9B /* IMG_2064.PNG */,
 				1B7AF3C71B6E5F9700C46A9B /* Main.storyboard */,
 				1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */,
 				1B7AF3CC1B6E5F9700C46A9B /* LaunchScreen.xib */,
@@ -117,6 +125,20 @@
 				1B7AF3D81B6E5F9700C46A9B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B7AF3E31B6E62B400C46A9B /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Prototype;
+			sourceTree = "<group>";
+		};
+		1B7AF3E41B6E63DE00C46A9B /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Prototype;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7AF3C91B6E5F9700C46A9B /* Main.storyboard in Resources */,
+				1B7AF3EA1B6E90E400C46A9B /* HoustonSkyline.jpg in Resources */,
 				1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */,
 				1B7AF3CB1B6E5F9700C46A9B /* Images.xcassets in Resources */,
+				1B7AF3E81B6E847800C46A9B /* IMG_2064.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +374,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Verve/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -360,8 +386,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Verve/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
