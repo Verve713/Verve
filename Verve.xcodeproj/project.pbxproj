@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0565191B76CE1000C0C8D4 /* Media Library in Resources */ = {isa = PBXBuildFile; fileRef = 1B0565181B76CE1000C0C8D4 /* Media Library */; };
 		1B7AF3C01B6E5F9700C46A9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3BF1B6E5F9700C46A9B /* main.m */; };
 		1B7AF3C31B6E5F9700C46A9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */; };
 		1B7AF3C61B6E5F9700C46A9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C51B6E5F9700C46A9B /* ViewController.m */; };
@@ -14,8 +15,6 @@
 		1B7AF3CB1B6E5F9700C46A9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */; };
 		1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3CC1B6E5F9700C46A9B /* LaunchScreen.xib */; };
 		1B7AF3DA1B6E5F9700C46A9B /* VerveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3D91B6E5F9700C46A9B /* VerveTests.m */; };
-		1B7AF3E81B6E847800C46A9B /* IMG_2064.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3E71B6E847800C46A9B /* IMG_2064.PNG */; };
-		1B7AF3EA1B6E90E400C46A9B /* HoustonSkyline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3E91B6E90E400C46A9B /* HoustonSkyline.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0565181B76CE1000C0C8D4 /* Media Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Media Library"; sourceTree = SOURCE_ROOT; };
 		1B7AF3BA1B6E5F9700C46A9B /* Verve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7AF3BE1B6E5F9700C46A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7AF3BF1B6E5F9700C46A9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,8 +42,6 @@
 		1B7AF3D31B6E5F9700C46A9B /* VerveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7AF3D81B6E5F9700C46A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7AF3D91B6E5F9700C46A9B /* VerveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerveTests.m; sourceTree = "<group>"; };
-		1B7AF3E71B6E847800C46A9B /* IMG_2064.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_2064.PNG; path = ../../../Documents/Photos/IMG_2064.PNG; sourceTree = "<group>"; };
-		1B7AF3E91B6E90E400C46A9B /* HoustonSkyline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = HoustonSkyline.jpg; path = ../../../Documents/Photos/HoustonSkyline.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +84,12 @@
 		1B7AF3BC1B6E5F9700C46A9B /* Verve */ = {
 			isa = PBXGroup;
 			children = (
-				1B7AF3E91B6E90E400C46A9B /* HoustonSkyline.jpg */,
+				1B0565181B76CE1000C0C8D4 /* Media Library */,
 				1B7AF3E31B6E62B400C46A9B /* Prototype */,
 				1B7AF3C11B6E5F9700C46A9B /* AppDelegate.h */,
 				1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */,
 				1B7AF3C41B6E5F9700C46A9B /* ViewController.h */,
 				1B7AF3C51B6E5F9700C46A9B /* ViewController.m */,
-				1B7AF3E71B6E847800C46A9B /* IMG_2064.PNG */,
 				1B7AF3C71B6E5F9700C46A9B /* Main.storyboard */,
 				1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */,
 				1B7AF3CC1B6E5F9700C46A9B /* LaunchScreen.xib */,
@@ -222,10 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7AF3C91B6E5F9700C46A9B /* Main.storyboard in Resources */,
-				1B7AF3EA1B6E90E400C46A9B /* HoustonSkyline.jpg in Resources */,
 				1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */,
+				1B0565191B76CE1000C0C8D4 /* Media Library in Resources */,
 				1B7AF3CB1B6E5F9700C46A9B /* Images.xcassets in Resources */,
-				1B7AF3E81B6E847800C46A9B /* IMG_2064.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
