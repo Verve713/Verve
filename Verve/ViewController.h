@@ -12,6 +12,10 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView1;
 @property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView2;
+@property (nonatomic, strong) IBOutlet UITableView *EventsTable;
+@property (nonatomic, strong) IBOutlet UITableViewCell *HostedEventsCell;
 
++ (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
++ (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
