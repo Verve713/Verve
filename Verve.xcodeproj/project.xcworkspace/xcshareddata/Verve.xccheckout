@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B0368466-409D-4754-B179-D2E1D20BBE8A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Verve</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A10FFDC71170C435AF56CB7665C0E9084E532F15</key>
 		<string>https://github.com/Verve713/Verve.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Verve.xcodeproj/project.xcworkspace</string>
+	<string>Verve.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A10FFDC71170C435AF56CB7665C0E9084E532F15</key>
