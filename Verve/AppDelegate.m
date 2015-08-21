@@ -13,7 +13,7 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

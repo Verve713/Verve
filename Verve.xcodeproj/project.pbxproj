@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1B0565191B76CE1000C0C8D4 /* Media Library in Resources */ = {isa = PBXBuildFile; fileRef = 1B0565181B76CE1000C0C8D4 /* Media Library */; };
+		1B05651B1B76E47400C0C8D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B05651A1B76E47400C0C8D4 /* Foundation.framework */; };
+		1B05651D1B76E47D00C0C8D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B05651C1B76E47D00C0C8D4 /* UIKit.framework */; };
+		1B2E1A521B77F02000C60D7C /* Concert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E1A4F1B77F02000C60D7C /* Concert.jpg */; };
+		1B2E1A531B77F02000C60D7C /* HoustonSkyline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E1A501B77F02000C60D7C /* HoustonSkyline.jpg */; };
+		1B2E1A541B77F02000C60D7C /* IMG_2064.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E1A511B77F02000C60D7C /* IMG_2064.PNG */; };
 		1B7AF3C01B6E5F9700C46A9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3BF1B6E5F9700C46A9B /* main.m */; };
 		1B7AF3C31B6E5F9700C46A9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */; };
 		1B7AF3C61B6E5F9700C46A9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C51B6E5F9700C46A9B /* ViewController.m */; };
 		1B7AF3C91B6E5F9700C46A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C71B6E5F9700C46A9B /* Main.storyboard */; };
-		1B7AF3CB1B6E5F9700C46A9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */; };
 		1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AF3CC1B6E5F9700C46A9B /* LaunchScreen.xib */; };
 		1B7AF3DA1B6E5F9700C46A9B /* VerveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3D91B6E5F9700C46A9B /* VerveTests.m */; };
+		1BAFF1B81B859BB000EC681B /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFF1B71B859BB000EC681B /* StaticTableViewController.m */; };
+		1BE12A0E1B803A7F004ED576 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE12A0D1B803A7F004ED576 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 
 /* Begin PBXFileReference section */
 		1B0565181B76CE1000C0C8D4 /* Media Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Media Library"; sourceTree = SOURCE_ROOT; };
+		1B05651A1B76E47400C0C8D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B05651C1B76E47D00C0C8D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B2E1A4E1B774AC600C60D7C /* Verve-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Verve-Prefix.pch"; sourceTree = "<group>"; };
+		1B2E1A4F1B77F02000C60D7C /* Concert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert.jpg; sourceTree = "<group>"; };
+		1B2E1A501B77F02000C60D7C /* HoustonSkyline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HoustonSkyline.jpg; sourceTree = "<group>"; };
+		1B2E1A511B77F02000C60D7C /* IMG_2064.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2064.PNG; sourceTree = "<group>"; };
 		1B7AF3BA1B6E5F9700C46A9B /* Verve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7AF3BE1B6E5F9700C46A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7AF3BF1B6E5F9700C46A9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,11 +49,13 @@
 		1B7AF3C41B6E5F9700C46A9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1B7AF3C51B6E5F9700C46A9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1B7AF3C81B6E5F9700C46A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1B7AF3CD1B6E5F9700C46A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1B7AF3D31B6E5F9700C46A9B /* VerveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7AF3D81B6E5F9700C46A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7AF3D91B6E5F9700C46A9B /* VerveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerveTests.m; sourceTree = "<group>"; };
+		1BAFF1B71B859BB000EC681B /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
+		1BAFF1B91B859C5C00EC681B /* StaticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
+		1BE12A0D1B803A7F004ED576 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE12A0E1B803A7F004ED576 /* MapKit.framework in Frameworks */,
+				1B05651D1B76E47D00C0C8D4 /* UIKit.framework in Frameworks */,
+				1B05651B1B76E47400C0C8D4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +82,9 @@
 		1B7AF3B11B6E5F9700C46A9B = {
 			isa = PBXGroup;
 			children = (
-				1B7AF3E41B6E63DE00C46A9B /* Prototype */,
+				1BE12A0D1B803A7F004ED576 /* MapKit.framework */,
+				1B05651C1B76E47D00C0C8D4 /* UIKit.framework */,
+				1B05651A1B76E47400C0C8D4 /* Foundation.framework */,
 				1B7AF3BC1B6E5F9700C46A9B /* Verve */,
 				1B7AF3D61B6E5F9700C46A9B /* VerveTests */,
 				1B7AF3BB1B6E5F9700C46A9B /* Products */,
@@ -90,8 +109,10 @@
 				1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */,
 				1B7AF3C41B6E5F9700C46A9B /* ViewController.h */,
 				1B7AF3C51B6E5F9700C46A9B /* ViewController.m */,
+				1BAFF1B71B859BB000EC681B /* StaticTableViewController.m */,
+				1BAFF1B91B859C5C00EC681B /* StaticTableViewController.h */,
+				1B2E1A4E1B774AC600C60D7C /* Verve-Prefix.pch */,
 				1B7AF3C71B6E5F9700C46A9B /* Main.storyboard */,
-				1B7AF3CA1B6E5F9700C46A9B /* Images.xcassets */,
 				1B7AF3CC1B6E5F9700C46A9B /* LaunchScreen.xib */,
 				1B7AF3BD1B6E5F9700C46A9B /* Supporting Files */,
 			);
@@ -127,13 +148,9 @@
 		1B7AF3E31B6E62B400C46A9B /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Prototype;
-			sourceTree = "<group>";
-		};
-		1B7AF3E41B6E63DE00C46A9B /* Prototype */ = {
-			isa = PBXGroup;
-			children = (
+				1B2E1A4F1B77F02000C60D7C /* Concert.jpg */,
+				1B2E1A501B77F02000C60D7C /* HoustonSkyline.jpg */,
+				1B2E1A511B77F02000C60D7C /* IMG_2064.PNG */,
 			);
 			name = Prototype;
 			sourceTree = "<group>";
@@ -218,10 +235,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2E1A541B77F02000C60D7C /* IMG_2064.PNG in Resources */,
 				1B7AF3C91B6E5F9700C46A9B /* Main.storyboard in Resources */,
 				1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */,
+				1B2E1A531B77F02000C60D7C /* HoustonSkyline.jpg in Resources */,
 				1B0565191B76CE1000C0C8D4 /* Media Library in Resources */,
-				1B7AF3CB1B6E5F9700C46A9B /* Images.xcassets in Resources */,
+				1B2E1A521B77F02000C60D7C /* Concert.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7AF3C61B6E5F9700C46A9B /* ViewController.m in Sources */,
+				1BAFF1B81B859BB000EC681B /* StaticTableViewController.m in Sources */,
 				1B7AF3C31B6E5F9700C46A9B /* AppDelegate.m in Sources */,
 				1B7AF3C01B6E5F9700C46A9B /* main.m in Sources */,
 			);
@@ -308,6 +328,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "Verve/Verve-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -351,6 +372,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Verve/Verve-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
