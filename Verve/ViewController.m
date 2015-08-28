@@ -113,8 +113,8 @@
     
     //[self.view bringSubviewToFront:<#(UIView *)#>]
     //[UIViewController tableView:EventsTableData numberOfRowsInSection:4];
-    //NSIndexPath *myIP = [NSIndexPath indexPathForRow:0 inSection:0];
-    /*self.HostEventCell = [ViewController tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
+    NSIndexPath *myIP = [NSIndexPath indexPathForRow:0 inSection:0];
+    self.HostEventCell = [ViewController tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
     self.HostEventCell.textLabel.textColor = (__bridge UIColor *)([UIColor blackColor].CGColor);
     self.HostEventCell.textLabel.text = @"Host an Event";
     self.MyEventsCell = [ViewController tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:1 inSection:0]];
@@ -122,7 +122,7 @@
     self.MyInvitationsCell = [ViewController tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0]];
     self.MyInvitationsCell.textLabel.text = @"My Invitations";
     self.EventAlbumCell = [ViewController tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0]];
-    self.EventAlbumCell.textLabel.text = @"Event Album";*/
+    self.EventAlbumCell.textLabel.text = @"Event Album";
     
     //_ProfileImageView1.image = [ViewController imageWithImage:_ProfileImageView1.image scaledToSize:CGSizeMake(50.0, 50.0)];
     
