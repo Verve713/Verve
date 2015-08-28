@@ -33,7 +33,7 @@
     
     [[self EventsTableObject]reloadData];
     
-    self.HostEventCell = [UITableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
+    self.HostEventCell = [tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
     self.HostEventCell.textLabel.textColor = (__bridge UIColor *)([UIColor blackColor].CGColor);
     self.HostEventCell.textLabel.text = @"Host an Event";
     self.MyEventsCell = [Homepage tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:1 inSection:0]];
