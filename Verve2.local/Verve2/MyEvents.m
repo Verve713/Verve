@@ -7,21 +7,53 @@
 //
 
 #import "MyEvents.h"
+#import "Database.h"
+#import "Event.h"
 
 @interface MyEvents ()
 
 @end
 
+NSMutableArray *myEventsArray;
+NSMutableArray *sectionsArray;
+NSMutableArray *rowsArray;
+//NSString *verveDB = @"Verve.db";
+Database *eventDB;
 @implementation MyEvents
+@synthesize eventsTableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    Event *event;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.eventsTableView = [[UITableView alloc] init];
+    self.eventsTableView.delegate = self; //[[self eventsTableView] setDelegate:self];
+    self.eventsTableView.dataSource = self;
+    
+    sectionsArray = [[NSMutableArray alloc] init];
+    [sectionsArray addObject:[NSString stringWithFormat:@"Events Table"]];
+    
+    rowsArray = [[NSMutableArray alloc] init];
+    
+    //Populate myEventsArray
+    //(void)populateEvents:(NSMutableArray *)eventArray forUser:(NSString *) userID
+    eventDB = [[Database alloc] init];
+    myEventsArray = [eventDB populateEventsForUser:@"2"];
+    //NSInteger numRows = [tableView:myEventsArray numberOfRowsInSection:1]
+    /*NSUInteger count = 0;
+    for (id event in myEventsArray)
+    {
+        UITableViewCell *eventCell = [tableView:eventsTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:count inSection:0]];
+        
+        count++;
+    }*/
+    
+    //NSString * dbPath = [eventDB getWritableDBPath];
+    [[self eventsTableView]reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,27 +63,44 @@
 
 #pragma mark - Table view data source
 
+//- (void)populateEventsList:(
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [myEventsArray count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
     // Configure the cell...
+    /*NSUInteger count = 0;
+    for (id event in myEventsArray)
+    {
+        UITableViewCell *eventCell = [tableView:eventsTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:count inSection:0]];
+        
+        count++;
+    }*/
+    //for (id event in myEventsArray)
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"reuseIdentifier"];
+    }
+    
+    Event *currentEvent = [myEventsArray objectAtIndex: indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.textLabel.text = currentEvent.eventName;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

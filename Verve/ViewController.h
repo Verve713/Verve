@@ -12,14 +12,14 @@
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 
-/*@property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView1;
+@property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView1;
 @property (nonatomic, strong) IBOutlet UIImageView *ProfileImageView2;
 @property (nonatomic, strong) IBOutlet UITableView *EventsTableObject;
 @property (nonatomic,retain) NSMutableArray *EventsTableData;
 @property (nonatomic, strong) IBOutlet UITableViewCell *HostEventCell;
 @property (nonatomic, strong) IBOutlet UITableViewCell *MyEventsCell;
 @property (nonatomic, strong) IBOutlet UITableViewCell *MyInvitationsCell;
-@property (nonatomic, strong) IBOutlet UITableViewCell *EventAlbumCell;*/
+@property (nonatomic, strong) IBOutlet UITableViewCell *EventAlbumCell;
 
 + (UIImage *)imageWithImage:(UIImage*)image
               scaledToSize:(CGSize)newSize;

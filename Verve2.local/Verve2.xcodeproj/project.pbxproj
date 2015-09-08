@@ -20,6 +20,13 @@
 		1BAFF1F71B85A91600EC681B /* MyInvitations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFF1F61B85A91600EC681B /* MyInvitations.m */; };
 		1BAFF1FA1B85A95300EC681B /* EventAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFF1F91B85A95300EC681B /* EventAlbum.m */; };
 		1BAFF2041B85B78B00EC681B /* Media Library in Resources */ = {isa = PBXBuildFile; fileRef = 1BAFF2031B85B78B00EC681B /* Media Library */; };
+		1BCEF3E51B9203C100B61019 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCEF3E41B9203C100B61019 /* UIKit.framework */; };
+		1BCEF3E71B9203D500B61019 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCEF3E61B9203D500B61019 /* Foundation.framework */; };
+		1BCEF3E91B9203DE00B61019 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCEF3E81B9203DE00B61019 /* MapKit.framework */; };
+		1BCEF3EB1B9203FA00B61019 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCEF3EA1B9203FA00B61019 /* libsqlite3.0.dylib */; };
+		1BCEF3EE1B92231D00B61019 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEF3ED1B92231D00B61019 /* Database.m */; };
+		1BCEF3F41B98010900B61019 /* Verve.db in Resources */ = {isa = PBXBuildFile; fileRef = 1BCEF3F31B98010900B61019 /* Verve.db */; };
+		1BCEF3F81B9C0F6800B61019 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEF3F71B9C0F6800B61019 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,15 @@
 		1BAFF1F81B85A95300EC681B /* EventAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventAlbum.h; sourceTree = "<group>"; };
 		1BAFF1F91B85A95300EC681B /* EventAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventAlbum.m; sourceTree = "<group>"; };
 		1BAFF2031B85B78B00EC681B /* Media Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Media Library"; sourceTree = "<group>"; };
+		1BCEF3E41B9203C100B61019 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1BCEF3E61B9203D500B61019 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1BCEF3E81B9203DE00B61019 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1BCEF3EA1B9203FA00B61019 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		1BCEF3EC1B92231D00B61019 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		1BCEF3ED1B92231D00B61019 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		1BCEF3F31B98010900B61019 /* Verve.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Verve.db; sourceTree = "<group>"; };
+		1BCEF3F61B9C0F6800B61019 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		1BCEF3F71B9C0F6800B61019 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +80,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BCEF3EB1B9203FA00B61019 /* libsqlite3.0.dylib in Frameworks */,
+				1BCEF3E91B9203DE00B61019 /* MapKit.framework in Frameworks */,
+				1BCEF3E71B9203D500B61019 /* Foundation.framework in Frameworks */,
+				1BCEF3E51B9203C100B61019 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +100,10 @@
 		1BAFF1BA1B859F1D00EC681B = {
 			isa = PBXGroup;
 			children = (
+				1BCEF3EA1B9203FA00B61019 /* libsqlite3.0.dylib */,
+				1BCEF3E81B9203DE00B61019 /* MapKit.framework */,
+				1BCEF3E61B9203D500B61019 /* Foundation.framework */,
+				1BCEF3E41B9203C100B61019 /* UIKit.framework */,
 				1BAFF1C51B859F1E00EC681B /* Verve2 */,
 				1BAFF1DF1B859F1F00EC681B /* Verve2Tests */,
 				1BAFF1C41B859F1E00EC681B /* Products */,
@@ -98,6 +122,9 @@
 		1BAFF1C51B859F1E00EC681B /* Verve2 */ = {
 			isa = PBXGroup;
 			children = (
+				1BCEF3F61B9C0F6800B61019 /* Event.h */,
+				1BCEF3F71B9C0F6800B61019 /* Event.m */,
+				1BCEF3F31B98010900B61019 /* Verve.db */,
 				1BAFF1CA1B859F1E00EC681B /* AppDelegate.h */,
 				1BAFF1CB1B859F1E00EC681B /* AppDelegate.m */,
 				1BAFF1CD1B859F1E00EC681B /* ViewController.h */,
@@ -106,6 +133,10 @@
 				1BAFF1ED1B85A7F300EC681B /* CreateEvent.m */,
 				1BAFF1EF1B85A82000EC681B /* MyEvents.h */,
 				1BAFF1F01B85A82000EC681B /* MyEvents.m */,
+				1BCEF3EC1B92231D00B61019 /* Database.h */,
+				1BCEF3ED1B92231D00B61019 /* Database.m */,
+				1B74EABA1B8C05AF003EBF98 /* Homepage.h */,
+				1B74EABB1B8C05AF003EBF98 /* Homepage.m */,
 				1BAFF1F51B85A91600EC681B /* MyInvitations.h */,
 				1BAFF1F61B85A91600EC681B /* MyInvitations.m */,
 				1BAFF1F81B85A95300EC681B /* EventAlbum.h */,
@@ -115,8 +146,6 @@
 				1BAFF2031B85B78B00EC681B /* Media Library */,
 				1BAFF1D51B859F1E00EC681B /* LaunchScreen.xib */,
 				1BAFF1C61B859F1E00EC681B /* Supporting Files */,
-				1B74EABA1B8C05AF003EBF98 /* Homepage.h */,
-				1B74EABB1B8C05AF003EBF98 /* Homepage.m */,
 			);
 			path = Verve2;
 			sourceTree = "<group>";
@@ -231,6 +260,7 @@
 				1BAFF1D21B859F1E00EC681B /* Main.storyboard in Resources */,
 				1BAFF1D71B859F1E00EC681B /* LaunchScreen.xib in Resources */,
 				1BAFF1D41B859F1E00EC681B /* Images.xcassets in Resources */,
+				1BCEF3F41B98010900B61019 /* Verve.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +280,9 @@
 			files = (
 				1BAFF1F11B85A82000EC681B /* MyEvents.m in Sources */,
 				1BAFF1CF1B859F1E00EC681B /* ViewController.m in Sources */,
+				1BCEF3F81B9C0F6800B61019 /* Event.m in Sources */,
 				1BAFF1CC1B859F1E00EC681B /* AppDelegate.m in Sources */,
+				1BCEF3EE1B92231D00B61019 /* Database.m in Sources */,
 				1B74EABC1B8C05AF003EBF98 /* Homepage.m in Sources */,
 				1BAFF1F71B85A91600EC681B /* MyInvitations.m in Sources */,
 				1BAFF1C91B859F1E00EC681B /* main.m in Sources */,
@@ -337,7 +369,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -374,7 +406,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

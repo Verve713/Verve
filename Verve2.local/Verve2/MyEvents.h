@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 @interface MyEvents : UITableViewController
-@property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
-
+@property (strong, nonatomic) IBOutlet UITableView *eventsTableView;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

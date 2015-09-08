@@ -59,7 +59,7 @@
     
 }*/
 
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
     
@@ -79,7 +79,7 @@
     
     return cell;
     
-}*/
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

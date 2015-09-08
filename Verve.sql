@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS "events";
+CREATE TABLE "events" ("id" INTEGER PRIMARY KEY  NOT NULL ,"eventname" TEXT NOT NULL  DEFAULT (null) ,"location" TEXT,"time" TEXT,"type" TEXT,"hostid" TEXT NOT NULL  DEFAULT (null) );
+INSERT INTO "events" VALUES(1,'Cameron''s First Birthday Party','TBD','TBD','Party','2');
+INSERT INTO "events" VALUES(2,'Toya''s 28th Birthday Getaway','New Orleans, LA','Friday, Oct. 16 - Sunday Oct. 18','Party','2');
+DROP TABLE IF EXISTS "invitations";
+CREATE TABLE "invitations" ("eventId" INTEGER PRIMARY KEY  NOT NULL , "photo" BLOB);
+DROP TABLE IF EXISTS "users";
+CREATE TABLE "users" ("userid" INTEGER PRIMARY KEY  NOT NULL  DEFAULT (null) ,"username" TEXT NOT NULL ,"password" TEXT NOT NULL ,"email" TEXT NOT NULL ,"firstname" TEXT,"lastname" TEXT);
+INSERT INTO "users" VALUES(1,'cgreen822','life713','carlgreen2009@gmail.com','Carl','Green');
+INSERT INTO "users" VALUES(2,'Luvanmusiq','life713','luvanmusiq87@hotmail.com','LaToya','Green');
+INSERT INTO "users" VALUES(3,'CameronElijah15','life713','CameronElijah15@hotmail.com','Cameron','Green');

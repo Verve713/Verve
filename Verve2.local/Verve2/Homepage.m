@@ -9,6 +9,7 @@
 #import "Homepage.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface Homepage ()
 
@@ -33,15 +34,15 @@
     
     [[self EventsTableObject]reloadData];
     
-    self.HostEventCell = [tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
+    /*self.HostEventCell = [self tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
     self.HostEventCell.textLabel.textColor = (__bridge UIColor *)([UIColor blackColor].CGColor);
     self.HostEventCell.textLabel.text = @"Host an Event";
-    self.MyEventsCell = [Homepage tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:1 inSection:0]];
+    self.MyEventsCell = [Homepage tableView:_EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:1 inSection:0]];
     self.MyEventsCell.textLabel.text = @"My Events";
     self.MyInvitationsCell = [Homepage tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0]];
     self.MyInvitationsCell.textLabel.text = @"My Invitations";
     self.EventAlbumCell = [Homepage tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0]];
-    self.EventAlbumCell.textLabel.text = @"Event Album";
+    self.EventAlbumCell.textLabel.text = @"Event Album";*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,9 +50,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+//#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
@@ -59,7 +60,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    
+    return 3;
 }
 
 
@@ -69,7 +71,7 @@
     // Configure the cell...
     
     return cell;
-}
+}*/
 
 
 /*
