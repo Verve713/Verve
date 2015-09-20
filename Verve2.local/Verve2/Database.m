@@ -8,12 +8,14 @@
 
 #import "Database.h"
 #import "Event.h"
+#import "User.h"
 
 @interface Database ()
 
 @end
 
-NSString *verveDB = @"Verve.db";
+NSString *verveDBString = @"Verve.db";
+
 
 @implementation Database
 /*@synthesize user;
@@ -37,15 +39,58 @@ NSString *verveDB = @"Verve.db";
     // Dispose of any resources that can be recreated.
 }
 
-- (NSMutableArray *)populateEventsForUser:(NSString *) userID {//========================VIEW=========================
+- (User *)getUserInfoWithUsername:(NSString *) userName withPassword:(NSString *) userPassword
+{
+    User *userInfo;
+    NSString *paths=[self getWritableDBPath];
+    
+    [self createEditableCopyOfDatabaseIfNeeded];
+    const char *dbpath =  [paths UTF8String];
+    sqlite3_stmt    *statement;
+    static sqlite3 *database = nil;
+    
+    if (sqlite3_open_v2(dbpath, &database, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT userid, username, password, email, firstname, lastname FROM users WHERE username='%@' AND password='%@'",userName, userPassword];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        //  NSLog(@"Databasae opened = %@", userN);
+        
+        if (sqlite3_prepare_v2(database,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            
+            while(sqlite3_step(statement) == SQLITE_ROW)
+            {
+                userInfo = [[User alloc] init];
+                userInfo.userID = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
+                userInfo.userName = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                userInfo.userPassword = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
+                userInfo.userEmail = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 3)];
+                userInfo.userFirstName = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 4)];
+                userInfo.userLastName = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 5)];
+                //userInfo.userPhoto = [[NSData alloc]initWithBytes:sqlite3_column_blob(statement, 6) length:sqlite3_column_bytes(statement, 6)];
+
+            }
+            
+        }
+        else
+            NSLog(@"Database returned error %d: %s", sqlite3_errcode(database), sqlite3_errmsg(database));
+    }
+    return userInfo;
+}
+
+- (NSMutableArray *)populateEventsForUser:(NSString *) userID {
+    //========================VIEW=========================
     
     /*NSString * eventId;
     NSString * user;*/
     Event *eventInfo;
-    NSString* hostID;
-    NSString* eventName;
-    NSString * myLine=@"";
-    NSString * paths=[self getWritableDBPath];
+    NSString *hostID;
+    NSString *eventName;
+    NSString *myLine=@"";
+    NSString *paths=[self getWritableDBPath];
     
     [self createEditableCopyOfDatabaseIfNeeded];
     NSMutableArray *eventArray = [[NSMutableArray alloc] init];
@@ -61,7 +106,7 @@ NSString *verveDB = @"Verve.db";
         NSString * sState3=@"' WHERE id='";*/
         //userID=@"1";
         //NSString * s=  [NSString stringWithFormat:@"%@%@%@%@%@%@%@",sState,theU,sState2,theE,sState3,theID,sState4];
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT id, eventname, location, time, type, hostid FROM events WHERE hostid='%@'",userID];
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT id, eventname, location, date, time, type, hostid, photo FROM events WHERE hostid='%@'",userID];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -77,10 +122,11 @@ NSString *verveDB = @"Verve.db";
                 eventInfo.eventID = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
                 eventInfo.eventName = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
                 eventInfo.eventLocation = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
-                //eventInfo.eventDate = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
-                eventInfo.eventTime = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 3)];
-                eventInfo.eventType = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 4)];
-                eventInfo.eventHost = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 5)];
+                eventInfo.eventDate = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 3)];
+                eventInfo.eventTime = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 4)];
+                eventInfo.eventType = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 5)];
+                eventInfo.eventHost = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 6)];
+                eventInfo.eventPhoto = [[NSData alloc]initWithBytes:sqlite3_column_blob(statement, 7) length:sqlite3_column_bytes(statement, 7)];
 
                 //theID = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
                 [eventArray addObject:eventInfo];
@@ -227,7 +273,7 @@ NSString *verveDB = @"Verve.db";
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    return [documentsDir stringByAppendingPathComponent:verveDB];
+    return [documentsDir stringByAppendingPathComponent:verveDBString];
     
 }
 
@@ -242,7 +288,7 @@ NSString *verveDB = @"Verve.db";
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                          NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:verveDB];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:verveDBString];
     
     success = [fileManager fileExistsAtPath:writableDBPath];
     if (success)
@@ -251,7 +297,7 @@ NSString *verveDB = @"Verve.db";
     // The writable database does not exist, so copy the default to
     // the appropriate location.
     NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath]
-                               stringByAppendingPathComponent:verveDB];
+                               stringByAppendingPathComponent:verveDBString];
     success = [fileManager copyItemAtPath:defaultDBPath
                                    toPath:writableDBPath
                                     error:&error];

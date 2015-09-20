@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Event : NSObject
 {
@@ -17,6 +18,7 @@
     NSString *eventTime;
     NSString *eventType;
     NSString *eventHost;
+    NSData *eventPhoto;
 }
 
 @property (copy) NSString *eventID;
@@ -26,4 +28,5 @@
 @property (copy) NSString *eventTime;
 @property (copy) NSString *eventType;
 @property (copy) NSString *eventHost;
+@property (copy) NSData *eventPhoto;
 @end

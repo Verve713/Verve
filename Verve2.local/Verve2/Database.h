@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import "User.h"
 
 @interface Database : NSObject
 
@@ -30,9 +31,9 @@
 - (NSString *) getWritableDBPath;
 
 
-
 @property (weak, nonatomic) IBOutlet UITextField *ider;
 //- (void)populateEvents:(NSMutableArray *)eventArray forUser:(NSString *) userID;
+- (User *)getUserInfoWithUsername:(NSString *) userName withPassword:(NSString *) userPassword;
 - (NSMutableArray *)populateEventsForUser:(NSString *) userID;
 
 @end

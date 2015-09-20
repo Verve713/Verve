@@ -32,6 +32,10 @@
     self.EventsTableObject.delegate = self; //[[self eventsTableView] setDelegate:self];
     self.EventsTableObject.dataSource = self;
     
+    self.ProfilePicture.layer.borderWidth = 2.0f;
+    self.ProfilePicture.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.ProfilePicture.clipsToBounds = YES;
+    
     [[self EventsTableObject]reloadData];
     
     /*self.HostEventCell = [self tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
@@ -48,6 +52,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
++ (UIImage*)imageWithImage:(UIImage*)image
+              scaledToSize:(CGSize)newSize;
+{
+    UIGraphicsBeginImageContext( newSize );
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 //#pragma mark - Table view data source

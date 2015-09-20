@@ -9,7 +9,7 @@
 #import "Event.h"
 
 @implementation Event
-@synthesize eventID,eventName,eventHost,eventLocation;
+@synthesize eventID, eventName, eventHost, eventLocation, eventDate, eventTime, eventType, eventPhoto;
 - (void)dealloc
 {
     self.eventID = nil;
@@ -19,6 +19,7 @@
     self.eventTime = nil;
     self.eventType = nil;
     self.eventHost = nil;
+    self.eventPhoto = nil;
     //[super dealloc]; //(provided by the compiler)
 }
 @end

@@ -11,6 +11,8 @@
 
 @interface Homepage : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) IBOutlet UIImageView *ProfilePicture;
+@property (nonatomic, strong) IBOutlet UIImageView *ProfileBackground;
 @property (nonatomic, strong) IBOutlet UITableView *EventsTableObject;
 @property (nonatomic,retain) NSMutableArray *EventsTableData;
 @property (strong, nonatomic) IBOutlet UITableViewCell *mapCell;
@@ -26,4 +28,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
++ (UIImage *)imageWithImage:(UIImage*)image
+               scaledToSize:(CGSize)newSize;
 @end

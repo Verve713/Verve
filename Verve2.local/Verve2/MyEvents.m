@@ -97,6 +97,7 @@ Database *eventDB;
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     cell.textLabel.text = currentEvent.eventName;
+    cell.imageView.image = [UIImage imageWithData: currentEvent.eventPhoto];
     
     return cell;
 }
