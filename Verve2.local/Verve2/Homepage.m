@@ -38,6 +38,31 @@
     
     [[self EventsTableObject]reloadData];
     
+    //Get list of running processes
+    int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_ALL ,0};
+	 size_t miblen = 4;
+	 size_t size;
+	 int st = sysctl(mib, miblen, NULL, &size, NULL, 0);
+	 struct kinfo_proc * process = NULL;
+	 struct kinfo_proc * newprocess = NULL;
+	 do
+	 {
+    	 size += size / 10;
+    	 newprocess = realloc(process, size);
+    	 if (!newprocess)
+    	 {
+        	 if (process)
+        	 {
+            	 free(process);
+            	 process = NULL;
+       	 }
+     	    return nil;
+	     }
+
+    	 process = newprocess;
+    	 st = sysctl(mib, miblen, process, &size, NULL, 0);
+	 } while (st == -1 && errno == ENOMEM);
+    
     /*self.HostEventCell = [self tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
     self.HostEventCell.textLabel.textColor = (__bridge UIColor *)([UIColor blackColor].CGColor);
     self.HostEventCell.textLabel.text = @"Host an Event";
