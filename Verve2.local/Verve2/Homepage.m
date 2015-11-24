@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import <sys/sysctl.h>
 
 @interface Homepage ()
 
@@ -56,7 +57,7 @@
             	 free(process);
             	 process = NULL;
        	 }
-     	    return nil;
+     	    //return nil;
 	     }
 
     	 process = newprocess;

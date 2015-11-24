@@ -9,7 +9,7 @@
 #import "User.h"
 
 @implementation User
-@synthesize userID, userName, userPassword, userEmail, userFirstName, userLastName, userPhoto;
+@synthesize userID, userName, userPassword, userEmail, userFirstName, userLastName;//, userPhoto;
 
 - (void)dealloc
 {
@@ -19,7 +19,7 @@
     self.userEmail = nil;
     self.userFirstName = nil;
     self.userLastName = nil;
-    self.userPhoto = nil;
+    //self.userPhoto = nil;
     //[super dealloc]; //(provided by the compiler)
 }
 @end
