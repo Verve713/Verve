@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
 		1B0565191B76CE1000C0C8D4 /* Media Library in Resources */ = {isa = PBXBuildFile; fileRef = 1B0565181B76CE1000C0C8D4 /* Media Library */; };
+<<<<<<< Updated upstream
 		1B05651B1B76E47400C0C8D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B05651A1B76E47400C0C8D4 /* Foundation.framework */; };
 		1B05651D1B76E47D00C0C8D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B05651C1B76E47D00C0C8D4 /* UIKit.framework */; };
 		1B2E1A521B77F02000C60D7C /* Concert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E1A4F1B77F02000C60D7C /* Concert.jpg */; };
 		1B2E1A531B77F02000C60D7C /* HoustonSkyline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E1A501B77F02000C60D7C /* HoustonSkyline.jpg */; };
 		1B2E1A541B77F02000C60D7C /* IMG_2064.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E1A511B77F02000C60D7C /* IMG_2064.PNG */; };
+=======
+=======
+		1B0565151B76CBFE00C0C8D4 /* Verve in Resources */ = {isa = PBXBuildFile; fileRef = 1B0565141B76CBFE00C0C8D4 /* Verve */; };
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		1B7AF3C01B6E5F9700C46A9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3BF1B6E5F9700C46A9B /* main.m */; };
 		1B7AF3C31B6E5F9700C46A9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */; };
 		1B7AF3C61B6E5F9700C46A9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AF3C51B6E5F9700C46A9B /* ViewController.m */; };
@@ -34,13 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< Updated upstream
 		1B0565181B76CE1000C0C8D4 /* Media Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Media Library"; sourceTree = SOURCE_ROOT; };
+<<<<<<< Updated upstream
 		1B05651A1B76E47400C0C8D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B05651C1B76E47D00C0C8D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1B2E1A4E1B774AC600C60D7C /* Verve-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Verve-Prefix.pch"; sourceTree = "<group>"; };
 		1B2E1A4F1B77F02000C60D7C /* Concert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert.jpg; sourceTree = "<group>"; };
 		1B2E1A501B77F02000C60D7C /* HoustonSkyline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HoustonSkyline.jpg; sourceTree = "<group>"; };
 		1B2E1A511B77F02000C60D7C /* IMG_2064.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2064.PNG; sourceTree = "<group>"; };
+=======
+=======
+		1B0565141B76CBFE00C0C8D4 /* Verve */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Verve; sourceTree = SOURCE_ROOT; };
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		1B7AF3BA1B6E5F9700C46A9B /* Verve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7AF3BE1B6E5F9700C46A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7AF3BF1B6E5F9700C46A9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,7 +117,11 @@
 		1B7AF3BC1B6E5F9700C46A9B /* Verve */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				1B0565181B76CE1000C0C8D4 /* Media Library */,
+=======
+				1B0565141B76CBFE00C0C8D4 /* Verve */,
+>>>>>>> Stashed changes
 				1B7AF3E31B6E62B400C46A9B /* Prototype */,
 				1B7AF3C11B6E5F9700C46A9B /* AppDelegate.h */,
 				1B7AF3C21B6E5F9700C46A9B /* AppDelegate.m */,
@@ -237,6 +255,10 @@
 			files = (
 				1B2E1A541B77F02000C60D7C /* IMG_2064.PNG in Resources */,
 				1B7AF3C91B6E5F9700C46A9B /* Main.storyboard in Resources */,
+<<<<<<< Updated upstream
+=======
+				1B0565151B76CBFE00C0C8D4 /* Verve in Resources */,
+>>>>>>> Stashed changes
 				1B7AF3CE1B6E5F9700C46A9B /* LaunchScreen.xib in Resources */,
 				1B2E1A531B77F02000C60D7C /* HoustonSkyline.jpg in Resources */,
 				1B0565191B76CE1000C0C8D4 /* Media Library in Resources */,
