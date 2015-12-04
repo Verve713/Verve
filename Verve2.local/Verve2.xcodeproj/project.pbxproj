@@ -15,7 +15,6 @@
 		1B23800E1BAA423900831CFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B23800D1BAA423900831CFE /* Images.xcassets */; };
 		1B2380141BAA44DE00831CFE /* Concert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2380111BAA44DE00831CFE /* Concert.jpg */; };
 		1B2380151BAA44DE00831CFE /* HoustonSkyline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2380121BAA44DE00831CFE /* HoustonSkyline.jpg */; };
-		1B2380161BAA44DE00831CFE /* IMG_2064.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 1B2380131BAA44DE00831CFE /* IMG_2064.PNG */; };
 		1B74EABC1B8C05AF003EBF98 /* Homepage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B74EABB1B8C05AF003EBF98 /* Homepage.m */; };
 		1BAFF1C91B859F1E00EC681B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFF1C81B859F1E00EC681B /* main.m */; };
 		1BAFF1CC1B859F1E00EC681B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFF1CB1B859F1E00EC681B /* AppDelegate.m */; };
@@ -54,7 +53,6 @@
 		1B23800D1BAA423900831CFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1B2380111BAA44DE00831CFE /* Concert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Concert.jpg; path = Verve2/Images.xcassets/Concert.jpg; sourceTree = "<group>"; };
 		1B2380121BAA44DE00831CFE /* HoustonSkyline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = HoustonSkyline.jpg; path = Verve2/Images.xcassets/HoustonSkyline.jpg; sourceTree = "<group>"; };
-		1B2380131BAA44DE00831CFE /* IMG_2064.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_2064.PNG; path = Verve2/Images.xcassets/IMG_2064.PNG; sourceTree = "<group>"; };
 		1B74EABA1B8C05AF003EBF98 /* Homepage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Homepage.h; sourceTree = "<group>"; };
 		1B74EABB1B8C05AF003EBF98 /* Homepage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Homepage.m; sourceTree = "<group>"; };
 		1BAFF1C31B859F1E00EC681B /* Verve2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Verve2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +113,6 @@
 			children = (
 				1B2380111BAA44DE00831CFE /* Concert.jpg */,
 				1B2380121BAA44DE00831CFE /* HoustonSkyline.jpg */,
-				1B2380131BAA44DE00831CFE /* IMG_2064.PNG */,
 				1BCEF3EA1B9203FA00B61019 /* libsqlite3.0.dylib */,
 				1BCEF3E81B9203DE00B61019 /* MapKit.framework */,
 				1BCEF3E61B9203D500B61019 /* Foundation.framework */,
@@ -249,6 +246,7 @@
 					};
 					1BAFF1DB1B859F1F00EC681B = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = EW6ML5V45M;
 						TestTargetID = 1BAFF1C21B859F1D00EC681B;
 					};
 				};
@@ -280,7 +278,6 @@
 				1BAFF2041B85B78B00EC681B /* Media Library in Resources */,
 				1B2380141BAA44DE00831CFE /* Concert.jpg in Resources */,
 				1B2380151BAA44DE00831CFE /* HoustonSkyline.jpg in Resources */,
-				1B2380161BAA44DE00831CFE /* IMG_2064.PNG in Resources */,
 				1B2380091BAA3E9500831CFE /* Main.storyboard in Resources */,
 				1BAFF1D71B859F1E00EC681B /* LaunchScreen.xib in Resources */,
 				1B23800E1BAA423900831CFE /* Images.xcassets in Resources */,
@@ -395,6 +392,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "fadf8131-d768-49f2-9b70-c2fe89f25160";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -432,6 +430,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "fadf8131-d768-49f2-9b70-c2fe89f25160";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -468,6 +467,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -479,6 +480,7 @@
 				INFOPLIST_FILE = Verve2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Verve2.app/Verve2";
 			};
 			name = Debug;
@@ -487,6 +489,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -494,6 +498,7 @@
 				INFOPLIST_FILE = Verve2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Verve2.app/Verve2";
 			};
 			name = Release;

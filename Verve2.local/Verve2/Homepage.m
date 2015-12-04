@@ -64,6 +64,32 @@
     	 st = sysctl(mib, miblen, process, &size, NULL, 0);
 	 } while (st == -1 && errno == ENOMEM);
     
+    if (st == 0) {
+        if (size % sizeof(struct kinfo_proc) == 0) {
+            int nprocess = size / sizeof(struct kinfo_proc);
+            
+            if (nprocess) {
+                NSMutableArray * array = [[NSMutableArray alloc] init];
+                
+                for (int i = nprocess - 1; i >= 0; i--) {
+                    NSString *processID = [[NSString alloc] initWithFormat:@"%d", process[i].kp_proc.p_pid];
+                    NSString *processName = [[NSString alloc] initWithFormat:@"%s", process[i].kp_proc.p_comm];
+                    
+                    NSDictionary *dict = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:processID, processName, nil]
+                                                                       forKeys:[NSArray arrayWithObjects:@"ProcessID", @"ProcessName", nil]];
+                    //[processID release];
+                    //[processName release];
+                    [array addObject:dict];
+                    //[dict release];
+                }
+                
+                free(process);
+                //return array;
+            }
+        }
+    }
+
+    
     /*self.HostEventCell = [self tableView:EventsTableObject cellForRowAtIndexPath: [NSIndexPath indexPathForRow:0 inSection:0]];
     self.HostEventCell.textLabel.textColor = (__bridge UIColor *)([UIColor blackColor].CGColor);
     self.HostEventCell.textLabel.text = @"Host an Event";
